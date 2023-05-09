@@ -28,3 +28,25 @@ console.log("The addition is : " + result);
 let z: number | string;
 z = 10;
 z = "Hello";
+
+if (true) {
+  let scopedVar: number;
+  scopedVar = 10;
+  console.log(scopedVar);
+}
+
+const PI: number = 3.14;
+// PI = 3.1454; // Error
+
+// Function as an expression
+var Square = function (x: number) {
+  return x * x;
+};
+console.log("The Square is : " + Square(10));
+
+// Arrow Function
+var Square = (x: number) => {
+  return x * x;
+};
+
+console.log("The Square is : " + Square(10));

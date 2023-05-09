@@ -23,3 +23,20 @@ console.log("The addition is : " + result);
 var z;
 z = 10;
 z = "Hello";
+if (true) {
+    var scopedVar = void 0;
+    scopedVar = 10;
+    console.log(scopedVar);
+}
+var PI = 3.14;
+// PI = 3.1454; // Error
+// Function as an expression
+var Square = function (x) {
+    return x * x;
+};
+console.log("The Square is : " + Square(10));
+// Arrow Function
+var Square = function (x) {
+    return x * x;
+};
+console.log("The Square is : " + Square(10));
