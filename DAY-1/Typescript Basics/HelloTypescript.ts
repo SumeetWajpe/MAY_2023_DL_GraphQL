@@ -13,3 +13,11 @@ y = 100;
 y = "Hello";
 y = true;
 y = { name: "XYZ" };
+
+// Functions
+function Add(x: number, y: number): number {
+  return x + y;
+}
+
+var result: number = Add(20, 30);
+console.log("The addition is : " + result);
