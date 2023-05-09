@@ -20,3 +20,11 @@ var cars: string[] = ["BMW", "AUDI", "MERC"];
 let [firstCar, , secondCar] = cars;
 console.log(firstCar);
 console.log(secondCar);
+
+//  Destructuring - Objects
+var player = { fname: "Djokovic", country: "Serbia", isWorldNo1: true };
+// let fname = player.fname;
+// let country = player.country;
+// OR
+let { country, fname } = player;
+console.log(fname);
