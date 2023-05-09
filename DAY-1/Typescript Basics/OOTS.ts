@@ -38,5 +38,17 @@
 // Spread Operator - Arrays
 var cars: string[] = ["BMW", "AUDI", "MERC"];
 var moreCars: string[] = ["TATA", "MAHINDRA"];
-var allCars: string[] = [...cars, ...moreCars];
+var allCars: string[] = [...cars, ...moreCars, "HONDA"];
 console.log(allCars);
+
+// Spread Operator - Objects
+let person = { fname: "Sachin", lname: "Tendulkar", country: "INDIA" };
+let player = { ...person, sport: "Cricket", country: "Bharat" };
+console.log(player);
+
+// Rest parameter
+function PrintBook(author: string, ...titles: string[]) {
+  console.log(author, titles);
+}
+PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire", "India 2020");
+PrintBook("Unknown");
