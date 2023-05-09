@@ -13,7 +13,13 @@ y = true;
 y = { name: "XYZ" };
 // Functions
 function Add(x, y) {
+    if (x == 0) {
+        return "x cannot be 0 !";
+    }
     return x + y;
 }
 var result = Add(20, 30);
 console.log("The addition is : " + result);
+var z;
+z = 10;
+z = "Hello";

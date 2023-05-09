@@ -15,9 +15,16 @@ y = true;
 y = { name: "XYZ" };
 
 // Functions
-function Add(x: number, y: number): number {
+function Add(x: number, y: number): number | string {
+  if (x == 0) {
+    return "x cannot be 0 !";
+  }
   return x + y;
 }
 
-var result: number = Add(20, 30);
+var result: number | string = Add(20, 30);
 console.log("The addition is : " + result);
+
+let z: number | string;
+z = 10;
+z = "Hello";
