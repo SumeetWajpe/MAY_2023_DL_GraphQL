@@ -55,3 +55,24 @@ var Square = (x: number): number => x * x;
 
 let i = 20;
 console.log(`The square of ${i} is ${Square(i)}`);
+
+// Parameters - Optional
+
+// function PrintBook(author?: string, title?: string, publication?: string) {
+//   console.log(author, title, publication);
+// }
+
+// PrintBook();
+
+// Parameters - Default
+function PrintBook(
+  author: string = "Unknown",
+  title: string = "Unknown",
+  publication: string = "Unknown",
+) {
+  console.log(author, title, publication);
+}
+
+PrintBook();
+PrintBook("Dummy Author", "Dummy Title");
+PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire", "Jaico");

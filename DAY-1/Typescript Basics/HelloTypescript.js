@@ -44,3 +44,18 @@ var Square = function (x) { return x * x; };
 // console.log("The Square " is : " + Square(10));
 var i = 20;
 console.log("The square of ".concat(i, " is ").concat(Square(i)));
+// Parameters - Optional
+// function PrintBook(author?: string, title?: string, publication?: string) {
+//   console.log(author, title, publication);
+// }
+// PrintBook();
+// Parameters - Default
+function PrintBook(author, title, publication) {
+    if (author === void 0) { author = "Unknown"; }
+    if (title === void 0) { title = "Unknown"; }
+    if (publication === void 0) { publication = "Unknown"; }
+    console.log(author, title, publication);
+}
+PrintBook();
+PrintBook("Dummy Author", "Dummy Title");
+PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire", "Jaico");
