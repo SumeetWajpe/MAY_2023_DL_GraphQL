@@ -4,7 +4,7 @@
 
 var x: number; // Type annotation
 x = 100;
-console.log(typeof x);
+// console.log(typeof x);
 
 var s: string;
 var b: boolean;
@@ -23,17 +23,17 @@ function Add(x: number, y: number): number | string {
 }
 
 var result: number | string = Add(20, 30);
-console.log("The addition is : " + result);
+// console.log("The addition is : " + result);
 
 let z: number | string; // ES6
 z = 10;
 z = "Hello";
 
-if (true) {
-  let scopedVar: number;
-  scopedVar = 10;
-  console.log(scopedVar);
-}
+// if (true) {
+//   let scopedVar: number;
+//   scopedVar = 10;
+//   console.log(scopedVar);
+// }
 
 const PI: number = 3.14; // ES6
 // PI = 3.1454; // Error
@@ -42,7 +42,7 @@ const PI: number = 3.14; // ES6
 var Square = function (x: number) {
   return x * x;
 };
-console.log("The Square is : " + Square(10));
+// console.log("The Square is : " + Square(10));
 
 // Arrow Function - ES6
 // var Square = (x: number) => {
@@ -54,7 +54,7 @@ var Square = (x: number): number => x * x;
 // console.log("The Square " is : " + Square(10));
 
 let i = 20;
-console.log(`The square of ${i} is ${Square(i)}`);
+// console.log(`The square of ${i} is ${Square(i)}`);
 
 // Parameters - Optional
 
@@ -73,9 +73,9 @@ function PrintBook(
   console.log(author, title, publication);
 }
 
-PrintBook();
-PrintBook("Dummy Author", "Dummy Title");
-PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire", "Jaico");
+// PrintBook();
+// PrintBook("Dummy Author", "Dummy Title");
+// PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire", "Jaico");
 
 // Arrays
 // Javascript
@@ -87,3 +87,16 @@ PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire", "Jaico");
 
 // Typescript way - Generics
 var cars: Array<string> = new Array<string>("BMW", "AUDI", "MERC");
+cars.forEach(function (name: string) {
+  console.log(name);
+});
+
+// OR - Arrow function
+cars.forEach((name: string) => console.log(name));
+
+// var Test = function () {
+//   console.log("Testing 1 2 3 !");
+// };
+// Test();
+
+var Test = () => console.log("Testing 1 2 3 !");
