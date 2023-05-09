@@ -76,3 +76,14 @@ function PrintBook(
 PrintBook();
 PrintBook("Dummy Author", "Dummy Title");
 PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire", "Jaico");
+
+// Arrays
+// Javascript
+// var cars = new Array("BMW", "AUDI", "MERC")
+//  var cars = ["BMW", "AUDI", "MERC",10,true];
+
+// Typescript
+// var cars: string[] = ["BMW", "AUDI", "MERC"];
+
+// Typescript way - Generics
+var cars: Array<string> = new Array<string>("BMW", "AUDI", "MERC");
