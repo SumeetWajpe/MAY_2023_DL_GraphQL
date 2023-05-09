@@ -25,7 +25,7 @@ function Add(x: number, y: number): number | string {
 var result: number | string = Add(20, 30);
 console.log("The addition is : " + result);
 
-let z: number | string;
+let z: number | string; // ES6
 z = 10;
 z = "Hello";
 
@@ -35,7 +35,7 @@ if (true) {
   console.log(scopedVar);
 }
 
-const PI: number = 3.14;
+const PI: number = 3.14; // ES6
 // PI = 3.1454; // Error
 
 // Function as an expression
@@ -44,9 +44,14 @@ var Square = function (x: number) {
 };
 console.log("The Square is : " + Square(10));
 
-// Arrow Function
-var Square = (x: number) => {
-  return x * x;
-};
+// Arrow Function - ES6
+// var Square = (x: number) => {
+//   return x * x;
+// };
+// OR
+var Square = (x: number): number => x * x;
 
-console.log("The Square is : " + Square(10));
+// console.log("The Square " is : " + Square(10));
+
+let i = 20;
+console.log(`The square of ${i} is ${Square(i)}`);
