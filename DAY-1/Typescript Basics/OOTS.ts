@@ -56,12 +56,19 @@ PrintBook("Unknown");
 // Classes
 
 class Car {
+  private id: number = 1; // private / public /protected
   name: string;
   speed: number;
+
   constructor(name: string = "BMW", speed: number = 100) {
     this.name = name;
     this.speed = speed;
   }
+
+  accelerate(): string {
+    return `The car ${this.name} is running at ${this.speed} kmph !`;
+  }
 }
 
 var carObj: Car = new Car();
+console.log(carObj.accelerate());

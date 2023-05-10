@@ -68,3 +68,19 @@ function PrintBook(author) {
 }
 PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire", "India 2020");
 PrintBook("Unknown");
+// Classes
+var Car = /** @class */ (function () {
+    function Car(name, speed) {
+        if (name === void 0) { name = "BMW"; }
+        if (speed === void 0) { speed = 100; }
+        this.id = 1; // private / public /protected
+        this.name = name;
+        this.speed = speed;
+    }
+    Car.prototype.accelerate = function () {
+        return "The car ".concat(this.name, " is running at ").concat(this.speed, " kmph !");
+    };
+    return Car;
+}());
+var carObj = new Car();
+console.log(carObj.accelerate());
