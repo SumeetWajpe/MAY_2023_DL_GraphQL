@@ -190,3 +190,12 @@ var Emp = /** @class */ (function () {
 }());
 var e = new Emp();
 e.designation = Designation.Architect;
+// Enhanced Class Syntax
+var EnhancedCar = /** @class */ (function () {
+    function EnhancedCar(name, speed) {
+        this.name = name;
+        this.speed = speed;
+    }
+    return EnhancedCar;
+}());
+var enCar = new EnhancedCar("Audi", 200);

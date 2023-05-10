@@ -180,3 +180,10 @@ class Emp {
 
 var e = new Emp();
 e.designation = Designation.Architect;
+
+// Enhanced Class Syntax
+class EnhancedCar {
+  constructor(public name: string, public speed: number) {}
+}
+
+var enCar = new EnhancedCar("Audi", 200);
