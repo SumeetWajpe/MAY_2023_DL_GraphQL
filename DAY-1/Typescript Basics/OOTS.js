@@ -114,3 +114,11 @@ var JamesBondCar = /** @class */ (function (_super) {
 }(Car));
 var jbc = new JamesBondCar("Aston Martin", 300, true);
 console.log(jbc.accelerate());
+var Employee = /** @class */ (function () {
+    function Employee() {
+    }
+    Employee.prototype.walk = function () {
+        console.log("Walking..");
+    };
+    return Employee;
+}());

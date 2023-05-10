@@ -86,3 +86,41 @@ class JamesBondCar extends Car {
 
 var jbc = new JamesBondCar("Aston Martin", 300, true);
 console.log(jbc.accelerate());
+
+interface IPerson {
+  name: string;
+  age: number;
+  walk: () => void;
+  talk?: () => void;
+}
+
+// interface IEmployee {
+//   id: number;
+//   salary: number;
+// }
+
+// class Employee implements IPerson, IEmployee {
+//   id: number;
+//   salary: number;
+//   name: string;
+//   age: number;
+//   walk(): void {
+//     console.log("Walking..");
+//   }
+// }
+
+// Interface extending interface
+
+interface IEmployee extends IPerson {
+  id: number;
+  salary: number;
+}
+class Employee implements IEmployee {
+  id: number;
+  salary: number;
+  name: string;
+  age: number;
+  walk(): void {
+    console.log("Walking..");
+  }
+}
