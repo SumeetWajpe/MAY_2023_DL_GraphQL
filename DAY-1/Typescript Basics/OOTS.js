@@ -114,11 +114,45 @@ var JamesBondCar = /** @class */ (function (_super) {
 }(Car));
 var jbc = new JamesBondCar("Aston Martin", 300, true);
 console.log(jbc.accelerate());
-var Employee = /** @class */ (function () {
-    function Employee() {
-    }
-    Employee.prototype.walk = function () {
-        console.log("Walking..");
-    };
-    return Employee;
-}());
+// interface IPerson {
+//   name: string;
+//   age: number;
+//   walk: () => void;
+//   talk?: () => void;
+// }
+// interface IEmployee {
+//   id: number;
+//   salary: number;
+// }
+// class Employee implements IPerson, IEmployee {
+//   id: number;
+//   salary: number;
+//   name: string;
+//   age: number;
+//   walk(): void {
+//     console.log("Walking..");
+//   }
+// }
+// Interface extending interface
+// interface IEmployee extends IPerson {
+//   id: number;
+//   salary: number;
+// }
+// class Employee implements IEmployee {
+//   id: number;
+//   salary: number;
+//   name: string;
+//   age: number;
+//   walk(): void {
+//     console.log("Walking..");
+//   }
+// }
+// Generics
+function Swap(x, y) {
+    var t;
+    t = x;
+    x = y;
+    y = t;
+}
+Swap(20, 30);
+Swap("Hello", "World");

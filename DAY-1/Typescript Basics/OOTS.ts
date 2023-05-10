@@ -87,12 +87,12 @@ class JamesBondCar extends Car {
 var jbc = new JamesBondCar("Aston Martin", 300, true);
 console.log(jbc.accelerate());
 
-interface IPerson {
-  name: string;
-  age: number;
-  walk: () => void;
-  talk?: () => void;
-}
+// interface IPerson {
+//   name: string;
+//   age: number;
+//   walk: () => void;
+//   talk?: () => void;
+// }
 
 // interface IEmployee {
 //   id: number;
@@ -111,16 +111,28 @@ interface IPerson {
 
 // Interface extending interface
 
-interface IEmployee extends IPerson {
-  id: number;
-  salary: number;
+// interface IEmployee extends IPerson {
+//   id: number;
+//   salary: number;
+// }
+// class Employee implements IEmployee {
+//   id: number;
+//   salary: number;
+//   name: string;
+//   age: number;
+//   walk(): void {
+//     console.log("Walking..");
+//   }
+// }
+
+// Generics
+
+function Swap<T>(x: T, y: T) {
+  var t: T;
+  t = x;
+  x = y;
+  y = t;
 }
-class Employee implements IEmployee {
-  id: number;
-  salary: number;
-  name: string;
-  age: number;
-  walk(): void {
-    console.log("Walking..");
-  }
-}
+
+Swap<number>(20, 30);
+Swap<string>("Hello", "World");
