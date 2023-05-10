@@ -52,3 +52,16 @@ function PrintBook(author: string, ...titles: string[]) {
 }
 PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire", "India 2020");
 PrintBook("Unknown");
+
+// Classes
+
+class Car {
+  name: string;
+  speed: number;
+  constructor(name: string = "BMW", speed: number = 100) {
+    this.name = name;
+    this.speed = speed;
+  }
+}
+
+var carObj: Car = new Car();
