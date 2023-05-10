@@ -144,18 +144,39 @@ class Point<T> {
 
 var point: Point<number> = new Point<number>();
 
-
 // Contraints in Generics
-class Emp {
-  name: string;
+// class Emp {
+//   name: string;
+// }
+
+// class Mgr extends Emp {}
+
+// class VicePresident extends Emp {}
+
+// class Freelancer {}
+
+// class Company<T extends Emp> {}
+
+// var company = new Company<Freelancer>();// Error
+
+// Enum
+
+enum Designation {
+  Developer = 100,
+  Trainer,
+  Tester,
+  Architect,
+  CEO,
 }
 
-class Mgr extends Emp {}
+var d = Designation.Trainer;
+console.log(d);
+console.log(Designation[d]);
 
-class VicePresident extends Emp {}
+class Emp {
+  name: string;
+  designation: Designation;
+}
 
-class Freelancer{}
-
-class Company<T extends Emp> {}
-
-var company = new Company<Freelancer>();
+var e = new Emp();
+e.designation = Designation.Architect;

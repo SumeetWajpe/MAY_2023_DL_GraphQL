@@ -163,33 +163,30 @@ var Point = /** @class */ (function () {
 }());
 var point = new Point();
 // Contraints in Generics
+// class Emp {
+//   name: string;
+// }
+// class Mgr extends Emp {}
+// class VicePresident extends Emp {}
+// class Freelancer {}
+// class Company<T extends Emp> {}
+// var company = new Company<Freelancer>();// Error
+// Enum
+var Designation;
+(function (Designation) {
+    Designation[Designation["Developer"] = 100] = "Developer";
+    Designation[Designation["Trainer"] = 101] = "Trainer";
+    Designation[Designation["Tester"] = 102] = "Tester";
+    Designation[Designation["Architect"] = 103] = "Architect";
+    Designation[Designation["CEO"] = 104] = "CEO";
+})(Designation || (Designation = {}));
+var d = Designation.Trainer;
+console.log(d);
+console.log(Designation[d]);
 var Emp = /** @class */ (function () {
     function Emp() {
     }
     return Emp;
 }());
-var Mgr = /** @class */ (function (_super) {
-    __extends(Mgr, _super);
-    function Mgr() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return Mgr;
-}(Emp));
-var VicePresident = /** @class */ (function (_super) {
-    __extends(VicePresident, _super);
-    function VicePresident() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return VicePresident;
-}(Emp));
-var Freelancer = /** @class */ (function () {
-    function Freelancer() {
-    }
-    return Freelancer;
-}());
-var Company = /** @class */ (function () {
-    function Company() {
-    }
-    return Company;
-}());
-var company = new Company();
+var e = new Emp();
+e.designation = Designation.Architect;
