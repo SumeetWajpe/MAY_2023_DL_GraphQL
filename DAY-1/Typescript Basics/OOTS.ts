@@ -70,5 +70,16 @@ class Car {
   }
 }
 
-var carObj: Car = new Car();
-console.log(carObj.accelerate());
+// var carObj: Car = new Car();
+// console.log(carObj.accelerate());
+
+class JamesBondCar extends Car {
+  useNitroPower: boolean = false;
+  constructor(name: string, speed: number, useNitroPower: boolean) {
+    super(name, speed);
+    this.useNitroPower = useNitroPower;
+  }
+}
+
+var jbc = new JamesBondCar("Aston Martin", 300, true);
+console.log(jbc.accelerate());
