@@ -79,6 +79,9 @@ class JamesBondCar extends Car {
     super(name, speed);
     this.useNitroPower = useNitroPower;
   }
+  accelerate(): string {
+    return super.accelerate() + " Can use nitro Power ? " + this.useNitroPower;
+  }
 }
 
 var jbc = new JamesBondCar("Aston Martin", 300, true);

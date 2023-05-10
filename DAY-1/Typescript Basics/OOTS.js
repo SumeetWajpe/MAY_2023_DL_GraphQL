@@ -107,6 +107,9 @@ var JamesBondCar = /** @class */ (function (_super) {
         _this.useNitroPower = useNitroPower;
         return _this;
     }
+    JamesBondCar.prototype.accelerate = function () {
+        return _super.prototype.accelerate.call(this) + " Can use nitro Power ? " + this.useNitroPower;
+    };
     return JamesBondCar;
 }(Car));
 var jbc = new JamesBondCar("Aston Martin", 300, true);
