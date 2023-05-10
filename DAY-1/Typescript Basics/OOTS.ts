@@ -136,3 +136,26 @@ function Swap<T>(x: T, y: T) {
 
 Swap<number>(20, 30);
 Swap<string>("Hello", "World");
+
+class Point<T> {
+  x: T;
+  y: T;
+}
+
+var point: Point<number> = new Point<number>();
+
+
+// Contraints in Generics
+class Emp {
+  name: string;
+}
+
+class Mgr extends Emp {}
+
+class VicePresident extends Emp {}
+
+class Freelancer{}
+
+class Company<T extends Emp> {}
+
+var company = new Company<Freelancer>();

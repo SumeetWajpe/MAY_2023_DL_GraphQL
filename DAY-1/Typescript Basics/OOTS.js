@@ -156,3 +156,40 @@ function Swap(x, y) {
 }
 Swap(20, 30);
 Swap("Hello", "World");
+var Point = /** @class */ (function () {
+    function Point() {
+    }
+    return Point;
+}());
+var point = new Point();
+// Contraints in Generics
+var Emp = /** @class */ (function () {
+    function Emp() {
+    }
+    return Emp;
+}());
+var Mgr = /** @class */ (function (_super) {
+    __extends(Mgr, _super);
+    function Mgr() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Mgr;
+}(Emp));
+var VicePresident = /** @class */ (function (_super) {
+    __extends(VicePresident, _super);
+    function VicePresident() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return VicePresident;
+}(Emp));
+var Freelancer = /** @class */ (function () {
+    function Freelancer() {
+    }
+    return Freelancer;
+}());
+var Company = /** @class */ (function () {
+    function Company() {
+    }
+    return Company;
+}());
+var company = new Company();
