@@ -1,9 +1,10 @@
+#======================= Get All Courses With Titles =======================
 query GetAllCoursesWithTitles {
   courses {
     title
   }
 }
-#========================
+#======================== Fetching all Courses with Id,title & price =======================
 query GetAllCoursesWithAllDetails {
   courses {
     id
@@ -11,7 +12,7 @@ query GetAllCoursesWithAllDetails {
     price
   }
 }
-#==================== Variables
+#==================== Variables =======================
 query Course($courseId: ID!) {
   course(id: $courseId) {
     id
@@ -21,7 +22,7 @@ query Course($courseId: ID!) {
   }
 }
 
-#======================= Fragments
+#======================= Fragments =======================
 query Courses {
   courses {
     ...allCourseFields
@@ -34,7 +35,7 @@ fragment allCourseFields on Course {
   price
   rating
 }
-#====================== Using Aliases
+#====================== Using Aliases =======================
 query Courses {
   courseOne: course(id: 1) {
     ...allCourseFields
@@ -53,3 +54,4 @@ fragment allCourseFields on Course {
   price
   rating
 }
+#================================
