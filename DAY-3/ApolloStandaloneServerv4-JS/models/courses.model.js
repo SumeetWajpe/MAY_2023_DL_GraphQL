@@ -7,6 +7,7 @@ export let courseList = [
     rating: 5,
     imageUrl:
       "https://ms314006.github.io/static/b7a8f321b0bbc07ca9b9d22a7a505ed5/97b31/React.jpg",
+    trainerId: 1,
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ export let courseList = [
     likes: 600,
     rating: 5,
     imageUrl: "https://logicalidea.co/wp-content/uploads/2020/05/Redux.jpg",
+    trainerId: 2,
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ export let courseList = [
     rating: 4,
     imageUrl:
       "https://www.cloudsavvyit.com/p/uploads/2019/07/2350564e.png?width=1198&trim=1,1&bg-color=000&pad=1,1",
+    trainerId: 1,
   },
   {
     id: 4,
@@ -33,6 +36,7 @@ export let courseList = [
     rating: 3,
     imageUrl:
       "https://bs-uploads.toptal.io/blackfish-uploads/blog/post/seo/og_image_file/og_image/15991/top-18-most-common-angularjs-developer-mistakes-41f9ad303a51db70e4a5204e101e7414.png",
+    trainerId: 2,
   },
   {
     id: 5,
@@ -41,5 +45,6 @@ export let courseList = [
     likes: 700,
     rating: 4,
     imageUrl: "https://miro.medium.com/max/2000/1*PCKC8Ufml-wvb9Vjj3aaWw.jpeg",
+    trainerId: 3,
   },
 ];

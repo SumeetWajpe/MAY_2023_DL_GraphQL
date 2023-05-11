@@ -13,6 +13,7 @@ export const typeDefs = `#graphql
         likes:Int
         rating:Int
         imageUrl:String
+        trainer:Trainer
     }
     type Trainer{
         id:ID!

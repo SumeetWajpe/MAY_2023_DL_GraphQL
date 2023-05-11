@@ -7,4 +7,10 @@ export const resolvers = {
     trainers: () => trainerList,
     trainer: (_, args) => trainerList.find(trainer => trainer.id == args.id),
   },
+  Course: {
+    trainer: parent => {
+      console.log(parent);
+      return trainerList.find(trainer => trainer.id == parent.trainerId);
+    },
+  },
 };

@@ -18,6 +18,6 @@ export let trainerList = [
     name: "Allen Defunkt",
     isMCT: true,
     followers: 400,
-    avatarUrl: "avatars.githubusercontent.com/u/3?v=4",
+    avatarUrl: "https://avatars.githubusercontent.com/u/3?v=4",
   },
 ];
