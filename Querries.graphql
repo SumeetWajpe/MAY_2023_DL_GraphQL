@@ -1,0 +1,13 @@
+query GetAllCoursesWithTitles {
+  courses {
+    title
+  }
+}
+========================
+query GetAllCoursesWithAllDetails{
+  courses{
+    id
+    title
+    price
+  }
+}
