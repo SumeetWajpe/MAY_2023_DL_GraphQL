@@ -3,11 +3,53 @@ query GetAllCoursesWithTitles {
     title
   }
 }
-========================
-query GetAllCoursesWithAllDetails{
-  courses{
+#========================
+query GetAllCoursesWithAllDetails {
+  courses {
     id
     title
     price
   }
+}
+#==================== Variables
+query Course($courseId: ID!) {
+  course(id: $courseId) {
+    id
+    title
+    price
+    rating
+  }
+}
+
+#======================= Fragments
+query Courses {
+  courses {
+    ...allCourseFields
+  }
+}
+
+fragment allCourseFields on Course {
+  id
+  title
+  price
+  rating
+}
+#====================== Using Aliases
+query Courses {
+  courseOne: course(id: 1) {
+    ...allCourseFields
+  }
+  courseTwo: course(id: 2) {
+    ...allCourseFields
+  }
+  allCourses: courses {
+    ...allCourseFields
+  }
+}
+
+fragment allCourseFields on Course {
+  id
+  title
+  price
+  rating
 }
