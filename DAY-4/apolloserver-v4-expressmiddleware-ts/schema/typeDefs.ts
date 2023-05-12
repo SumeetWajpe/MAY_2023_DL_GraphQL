@@ -1,13 +1,18 @@
 export const typeDefs = `#graphql
     type Query{
-        courses:[Course]
+        courses:[Course] | Error
         course(id:ID!):Course
         trainers:[Trainer]
         trainer(id:ID!):Trainer
     }
 
     type Mutation{
-        createTrainer(id:ID!,name:String,isMCT:Boolean,followers:Int,avatarUrl:String):Trainer
+        createTrainer(id:ID!,name:String,isMCT:Boolean,followers:Int,avatarUrl:String):Trainer | Error
+    }
+
+
+    type Error{
+        msg:String
     }
 
      type Course{

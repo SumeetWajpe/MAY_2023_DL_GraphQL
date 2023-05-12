@@ -28,6 +28,10 @@ export const resolvers = {
         return newTrainer;
       } catch (error) {
         console.log(error);
+        let theError = {
+          msg: error.message,
+        };
+        return theError;
       }
     },
   },

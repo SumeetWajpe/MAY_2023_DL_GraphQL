@@ -54,7 +54,7 @@ fragment allCourseFields on Course {
   price
   rating
 }
-#================================ Mutation 
+#================================ Mutation ================================
 mutation Mutation(
   $createTrainerId: ID!
   $name: String
@@ -74,7 +74,7 @@ mutation Mutation(
   }
 }
 
-#*** 
+#*** variables ->
 {
   "createTrainerId": 4,
   "name": "Mayur Tendulkar",
