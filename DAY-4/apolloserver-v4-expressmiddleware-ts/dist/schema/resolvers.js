@@ -6,8 +6,7 @@ export const resolvers = {
     },
     Course: {
         trainer: (parent) => {
-            console.log(parent);
-            return trainerList.find(trainer => trainer.id == parent.trainerId);
+            return trainerList.find((trainer) => trainer.id == parent.trainerId);
         },
     },
 };

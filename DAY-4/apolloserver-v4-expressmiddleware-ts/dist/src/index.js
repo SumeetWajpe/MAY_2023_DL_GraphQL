@@ -16,23 +16,16 @@ const httpServer = http.createServer(app);
 // Same ApolloServer initialization as before, plus the drain plugin
 // for our httpServer.
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+    typeDefs,
+    resolvers,
 });
 // Ensure we wait for our server to start
 await server.start();
 // Set up our Express middleware to handle CORS, body parsing,
 // and our expressMiddleware function.
-
-app.use(
-  "/graphql",
-  cors(),
-  bodyParser.json(),
-  // expressMiddleware accepts the same arguments:
-  // an Apollo Server instance and optional configuration options
-  expressMiddleware(server),
-);
+app.use("/graphql", cors(), bodyParser.json(), 
+// expressMiddleware accepts the same arguments:
+// an Apollo Server instance and optional configuration options
+expressMiddleware(server));
 // Modified server startup
-app.listen(4000, () =>
-  console.log(`🚀 GraphQL Server ready at http://localhost:4000/graphql`),
-);
+app.listen(4000, () => console.log(`🚀 GraphQL Server ready at http://localhost:4000/graphql`));
