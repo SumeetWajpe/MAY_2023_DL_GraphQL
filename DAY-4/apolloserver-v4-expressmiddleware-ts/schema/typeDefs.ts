@@ -6,6 +6,10 @@ export const typeDefs = `#graphql
         trainer(id:ID!):Trainer
     }
 
+    type Mutation{
+        createTrainer(id:ID!,name:String,isMCT:Boolean,followers:Int,avatarUrl:String):Trainer
+    }
+
      type Course{
         id:ID!
         title:String!
