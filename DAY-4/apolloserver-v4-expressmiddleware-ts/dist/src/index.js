@@ -7,12 +7,17 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import { typeDefs } from "../schema/typeDefs.js";
 import { resolvers } from "../schema/resolvers.js";
+import mongoose from "mongoose";
 // Required logic for integrating with Express
 const app = express();
 // Our httpServer handles incoming requests to our Express app.
 // Below, we tell Apollo Server to "drain" this httpServer,
 // enabling our servers to shut down gracefully.
 const httpServer = http.createServer(app);
+mongoose.connect("mongodb://localhost:27017/onlinetrainingdb");
+mongoose.connection.once("open", () => {
+    console.log("Connected to MongoDb -> onlinetrainingdb !");
+});
 // Same ApolloServer initialization as before, plus the drain plugin
 // for our httpServer.
 const server = new ApolloServer({
