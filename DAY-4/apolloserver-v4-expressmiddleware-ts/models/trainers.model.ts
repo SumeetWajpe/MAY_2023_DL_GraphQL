@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 
 const TrainerSchema = new Schema({
-  id: String,
+  id: Number,
   name: String,
   isMCT: Boolean,
   followers: Number,
