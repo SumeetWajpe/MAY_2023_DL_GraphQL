@@ -54,4 +54,32 @@ fragment allCourseFields on Course {
   price
   rating
 }
-#================================
+#================================ Mutation 
+mutation Mutation(
+  $createTrainerId: ID!
+  $name: String
+  $isMct: Boolean
+  $followers: Int
+  $avatarUrl: String
+) {
+  createTrainer(
+    id: $createTrainerId
+    name: $name
+    isMCT: $isMct
+    followers: $followers
+    avatarUrl: $avatarUrl
+  ) {
+    name
+    isMCT
+  }
+}
+
+#*** 
+{
+  "createTrainerId": 4,
+  "name": "Mayur Tendulkar",
+  "isMct": true,
+  "followers": 200,
+  "avatarUrl": "https://media.licdn.com/dms/image/D4D03AQG-2qCYmRel6w/profile-displayphoto-shrink_800_800/0/1681323884037?e=2147483647&v=beta&t=gwBxojCgWSeKApIo8nFZMchjn8CvjqHsQLjwod0-Ooo"
+}
+#===================================
