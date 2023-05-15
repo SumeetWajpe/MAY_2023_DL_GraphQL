@@ -4,7 +4,7 @@ import Listofcourses from "./listofcourses/listofcourses.component";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <Listofcourses></Listofcourses>
     </div>
   );
