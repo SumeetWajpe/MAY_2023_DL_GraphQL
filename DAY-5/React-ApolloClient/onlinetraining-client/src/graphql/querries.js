@@ -9,6 +9,14 @@ export const GET_ALL_COURSES = gql`
       likes
       rating
       imageUrl
+      trainer {
+        name
+        isMCT
+        avatarUrl
+      }
     }
   }
 `;
+
+
+// 2. GET_COURSE_DETAILS_TRINER_BY_ID

@@ -19,7 +19,7 @@ export default function Listofcourses() {
   return (
     <div className="row">
       {courses.map(course => (
-        <Course course={course}></Course>
+        <Course course={course} key={course.id}></Course>
       ))}
     </div>
   );
