@@ -23,6 +23,10 @@ export const resolvers = {
             }
             catch (error) {
                 console.log(error);
+                let theError = {
+                    msg: error.message,
+                };
+                return theError;
             }
         },
     },
