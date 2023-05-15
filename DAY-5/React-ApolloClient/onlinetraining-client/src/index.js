@@ -14,17 +14,17 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 // Testing the connection
-client
-  .query({
-    query: gql`
-      query GetAllCoursesWithTitles {
-        courses {
-          title
-        }
-      }
-    `,
-  })
-  .then(response => console.log(response));
+// client
+//   .query({
+//     query: gql`
+//       query GetAllCoursesWithTitles {
+//         courses {
+//           title
+//         }
+//       }
+//     `,
+//   })
+//   .then(response => console.log(response));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
