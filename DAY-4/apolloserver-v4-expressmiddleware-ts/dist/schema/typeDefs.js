@@ -8,6 +8,7 @@ export const typeDefs = `#graphql
 
     type Mutation{
         createTrainer(id:ID!,name:String,isMCT:Boolean,followers:Int,avatarUrl:String):Trainer 
+        deleteCourse(id:ID!):ID
     }
 
 

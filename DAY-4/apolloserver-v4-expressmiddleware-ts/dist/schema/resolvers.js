@@ -29,6 +29,10 @@ export const resolvers = {
                 return theError;
             }
         },
+        deleteCourse: async (_, { id }) => {
+            await CourseModel.deleteOne({ id });
+            return id;
+        },
     },
     Course: {
         trainer: async (parent) => await TrainerModel.findOne({ id: parent.trainerId }),
