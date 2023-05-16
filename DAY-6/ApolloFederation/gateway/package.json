@@ -1,0 +1,20 @@
+{
+  "name": "apollofederation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "compile": "tsc",
+    "start": "npm run compile && nodemon ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/gateway": "^2.2.1",
+    "@apollo/server": "^4.4.0",
+    "apollo-server": "^3.11.1",
+    "graphql": "^16.6.0"
+  }
+}
