@@ -8,7 +8,10 @@ export default function CourseDetails() {
   const { cid } = useParams();
   useEffect(() => {
     //fetch data from cache
-    const { courses } = client.readQuery({ query: GET_ALL_COURSES }); //any previously executed query
+    const { courses } = client.readQuery({
+      query: GET_ALL_COURSES,
+      variables: { limit: 4, offset: 0 },
+    }); //any previously executed query
     let currentCourse = courses.find(c => c.id == cid);
     setCourse(currentCourse);
   });
