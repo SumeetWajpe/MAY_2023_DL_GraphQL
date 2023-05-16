@@ -1,6 +1,6 @@
 export const typeDefs = `#graphql
     type Query{
-        courses:[Course] 
+        courses(limit:Int!,offset:Int!):[Course] 
         course(id:ID!):Course
         trainers:[Trainer]
         trainer(id:ID!):Trainer

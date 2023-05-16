@@ -9,7 +9,8 @@ export const resolvers = {
     trainers: async () => await TrainerModel.find({}), // select * from
     trainer: async (_, args: TrainerArgsID) =>
       await TrainerModel.findOne({ id: args.id }),
-    courses: async () => await CourseModel.find({}),
+    courses: async (_, { limit, offset }) =>
+      await CourseModel.find({}).skip(offset).limit(limit),
     course: async (_, args: CourseArgsID) =>
       await CourseModel.findOne({ id: args.id }),
   },
