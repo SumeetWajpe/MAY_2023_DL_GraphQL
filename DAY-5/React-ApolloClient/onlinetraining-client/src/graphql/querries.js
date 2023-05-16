@@ -1,8 +1,26 @@
 import { gql } from "@apollo/client";
 
+// export const GET_ALL_COURSES = gql`
+//   query GetAllCourses {
+//     courses {
+//       id
+//       title
+//       price
+//       likes
+//       rating
+//       imageUrl
+//       trainer {
+//         name
+//         isMCT
+//         avatarUrl
+//       }
+//     }
+//   }
+// `;
+
 export const GET_ALL_COURSES = gql`
-  query GetAllCourses {
-    courses {
+  query GetAllCourses($limit: Int!, $offset: Int!) {
+    courses(limit: $limit, offset: $offset) {
       id
       title
       price
@@ -17,7 +35,6 @@ export const GET_ALL_COURSES = gql`
     }
   }
 `;
-
 
 // 2. GET_COURSE_DETAILS_TRINER_BY_ID
 

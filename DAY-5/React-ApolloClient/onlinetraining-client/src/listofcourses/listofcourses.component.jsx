@@ -7,12 +7,21 @@ export default function Listofcourses() {
   // query -> useQuery(ourgraphqlquery) -> {error,loading,data}
   // state -> initial state value, method to update the state
 
-  let { error, loading, data } = useQuery(GET_ALL_COURSES);
+  const PAGE_SIZE = 4;
+
+  const [page, setPage] = useState(0);
+
+  let { error, loading, data } = useQuery(GET_ALL_COURSES, {
+    variables: {
+      limit: PAGE_SIZE,
+      offset: PAGE_SIZE * page,
+    },
+  });
   let [courses, setCourses] = useState([]);
 
   useEffect(() => {
     if (!loading) setCourses(data.courses);
-  });
+  }, [data]);
 
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;

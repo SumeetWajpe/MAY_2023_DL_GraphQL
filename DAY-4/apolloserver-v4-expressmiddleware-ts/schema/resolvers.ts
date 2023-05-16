@@ -10,7 +10,7 @@ export const resolvers = {
     trainer: async (_, args: TrainerArgsID) =>
       await TrainerModel.findOne({ id: args.id }),
     courses: async (_, { limit, offset }) =>
-      await CourseModel.find({}).skip(offset).limit(limit),
+      await CourseModel.find({}).skip(offset).limit(limit).sort({ title: 1 }), // will be sorted with title in ascending (1)
     course: async (_, args: CourseArgsID) =>
       await CourseModel.findOne({ id: args.id }),
   },

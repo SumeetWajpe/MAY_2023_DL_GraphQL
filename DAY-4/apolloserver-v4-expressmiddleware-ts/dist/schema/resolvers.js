@@ -4,7 +4,7 @@ export const resolvers = {
     Query: {
         trainers: async () => await TrainerModel.find({}),
         trainer: async (_, args) => await TrainerModel.findOne({ id: args.id }),
-        courses: async () => await CourseModel.find({}),
+        courses: async (_, { limit, offset }) => await CourseModel.find({}).skip(offset).limit(limit).sort({ title: 1 }),
         course: async (_, args) => await CourseModel.findOne({ id: args.id }),
     },
     Mutation: {

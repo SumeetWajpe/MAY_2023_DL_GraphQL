@@ -24,7 +24,7 @@ export default function Course(props) {
     );
   }
   return (
-    <div className="col-md-4">
+    <div className="col-md-3">
       <div className="card p-2" style={{ width: "18rem" }}>
         <Link to={`/coursedetails/${props.course.id}`}>
           <img
