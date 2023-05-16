@@ -38,6 +38,23 @@ export const resolvers = {
       await CourseModel.deleteOne({ id });
       return id;
     },
+    createCourse: async (_, { newcourse }) => {
+      // insert a new course in db
+      try {
+        console.log(newcourse);
+        let newCourseToBeAdded = new CourseModel({
+          ...newcourse,
+        });
+        await newCourseToBeAdded.save();
+        return newCourseToBeAdded;
+      } catch (error) {
+        console.log(error);
+        let theError = {
+          msg: error.message,
+        };
+        return theError;
+      }
+    },
   },
   Course: {
     trainer: async (parent: Course) =>

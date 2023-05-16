@@ -3,6 +3,7 @@ import "./App.css";
 import Listofcourses from "./listofcourses/listofcourses.component";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import CourseDetails from "./coursedetails/coursedetails.component";
+import NewCourse from "./newcourse/newcourse.component";
 function App() {
   return (
     <BrowserRouter>
@@ -41,6 +42,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Listofcourses></Listofcourses>}></Route>
         <Route path="/coursedetails/:cid" element={<CourseDetails />}></Route>
+        <Route path="/newcourse" element={<NewCourse />}></Route>
       </Routes>
     </BrowserRouter>
   );

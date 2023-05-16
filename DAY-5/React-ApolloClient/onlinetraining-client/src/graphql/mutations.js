@@ -5,3 +5,11 @@ export const DELETE_A_COURSE = gql`
     deleteCourse(id: $tobeDeletedCourseId)
   }
 `;
+
+export const CREATE_A_COURSE = gql`
+  mutation AddCourse($newcourse: NewCourseInput) {
+    createCourse(newcourse: $newcourse) {
+      id
+    }
+  }
+`;
